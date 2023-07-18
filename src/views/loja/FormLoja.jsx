@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import InputMask from 'react-input-mask';
-import { Button, Container, Divider, Form, Icon, Segment,Modal,Header} from 'semantic-ui-react';
-import {mensagemErro, notifyError, notifySuccess } from '../../views/util/Util';
+import { Link, useLocation } from "react-router-dom";
+import { Button, Container, Divider, Form, Header, Icon, Modal, Segment } from 'semantic-ui-react';
+import MenuSistema from '../../MenuSistema';
 import { ENDERECO_API } from '../../views/util/Constantes';
+import { mensagemErro, notifyError, notifySuccess } from '../../views/util/Util';
 
 export default function FormLoja () {
 
@@ -93,7 +94,7 @@ export default function FormLoja () {
 		<div>
 			
 			<div style={{marginTop: '3%'}}>
-				
+			<MenuSistema />
 				<Container textAlign='justified' >
 
 					{ idLoja === undefined &&

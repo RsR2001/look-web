@@ -2,8 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Divider, Header, Icon, Modal, Table } from 'semantic-ui-react';
+import MenuSistema from '../../MenuSistema';
 import { ENDERECO_API } from '../../views/util/Constantes';
-
 export default function ListCategoriaProduto () {
 
     const [lista, setLista] = useState();
@@ -54,7 +54,7 @@ export default function ListCategoriaProduto () {
         <div>
 
             <div style={{marginTop: '3%'}}>
-
+            <MenuSistema />
                 <Container textAlign='justified' >
 
                     <h2> Categoria de Produto</h2>

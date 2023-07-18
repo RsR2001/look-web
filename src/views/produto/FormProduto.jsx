@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import InputMask from 'react-input-mask';
 import { Link, useLocation } from "react-router-dom";
 import { Button, Container, Divider, Form, Header, Icon, Modal, Segment } from 'semantic-ui-react';
+import MenuSistema from '../../MenuSistema';
 import { ENDERECO_API } from '../../views/util/Constantes';
 import { mensagemErro, notifyError, notifySuccess } from '../../views/util/Util';
-
 export default function FormProduto() {
 
 	const { state } = useLocation();
@@ -110,7 +110,7 @@ export default function FormProduto() {
 		<div>
 
 			<div style={{ marginTop: '3%' }}>
-
+			<MenuSistema />
 				<Container textAlign='justified' >
 
 					{idProduto === undefined &&

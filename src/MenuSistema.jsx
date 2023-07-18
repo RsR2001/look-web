@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Dropdown, Input, Menu } from 'semantic-ui-react';
-
+import { logout } from './views/ultil/AuthenticationService';
 export default class MenuExampleStackable extends Component {
   state = {}
 
@@ -89,7 +89,7 @@ export default class MenuExampleStackable extends Component {
                 active={activeItem === 'login'}
                 onClick={this.handleItemClick}
                 as={Link}
-                to='/cadastro'
+                to='/form-login'
               />
 
               <Menu.Item icon='shopping basket'
@@ -99,6 +99,13 @@ export default class MenuExampleStackable extends Component {
                 as={Link}
                 to='/form-loja'
               />
+              <Menu.Item
+                        className='navbar__item--mobile'
+                        onClick={this.logout}
+                        content='Sair'
+                        as={Link}
+                        to='/'
+                    />
             </Menu.Menu>
           </Menu>
         </div>
